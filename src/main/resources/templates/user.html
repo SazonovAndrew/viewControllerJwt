@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>User</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+</head>
+<body>
+<!--${user.username} + ' with roles: ' + ${user.rolesString()}-->
+<header>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <span class="navbar-brand col-sm-3 col-md-2 mr-0" id="headerSpan"></span>
+        <div>
+            <ul class="navbar-nav px-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout" onclick="logout()">Logout</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <aside class="col-md-2 p-0 bg-light">
+            <nav class="d-none d-md-block bg-light sidebar" style="height: 100vh">
+                <div class="sidebar-sticky">
+                    <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between nav-pills mt-3"/>
+                    <li class="nav-item">
+                        <a class="nav-link active p-2" href="#">User</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <main class="col">
+            <h1 class="mt-3 mb-3">User information-page </h1>
+            <div class="card" style="width: auto;">
+                <div class="card-header ">
+                    <h5>About user</h5>
+                </div>
+                <form  id="formUser">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="table-responsive">
+                            <table class="table table-striped ">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr id="oneUser">
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+                </form>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<script src="/JS/user.js"></script>
+</body>
+</html>
